@@ -4,22 +4,23 @@ import { Card, CardContent } from "./components/ui/card"
 import { Input } from "./components/ui/input"
 import { Textarea } from "./components/ui/textarea"
 import { CheckCircle, Star, MessageCircle } from "lucide-react"
+import Navbar from "./components/navbar"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+      {/* <header className="relative z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
            <div className="flex items-center">
-  <img
-    src="/images/parabola-logo.png"
-    alt="Parabola"
-    width={120}
-    height={40}
-    className="h-8 w-auto"
-  />
+      <img
+        src="/images/parabola-logo.png"
+        alt="Parabola"
+        width={120}
+        height={40}
+          className="h-8 w-auto"
+        />
 </div>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -39,7 +40,8 @@ export default function Home() {
             <Button className="bg-black text-white hover:bg-gray-800 px-6">Quiero mi sitio web</Button>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Navbar/>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
