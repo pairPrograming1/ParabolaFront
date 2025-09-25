@@ -1,21 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "./ui/button"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar(params) {
-    
-
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { label: "Servicios", href: "#servicios" },
     { label: "Trabajos realizados", href: "#trabajos" },
     { label: "Blog", href: "#blog" },
     { label: "Usuarios", href: "#usuarios" },
-  ]
+  ];
 
   return (
     <header className="bg-white/90 backdrop-blur-sm border-b border-gray-100 fixed w-full z-50">
@@ -55,7 +53,11 @@ export default function Navbar(params) {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -82,5 +84,5 @@ export default function Navbar(params) {
         </div>
       )}
     </header>
-  )
+  );
 }
